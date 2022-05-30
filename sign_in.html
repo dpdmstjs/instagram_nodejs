@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+<link rel="icon" type = "image/png" href="/worskpace/image/favicon.png"/>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body>
+    <div id="wrap">
+		<section class="main">
+            <article class="content-box d-flex justify-content-center align-items-center">
+                <div class="image-box d-flex">
+                    <img src="/workspace/image/sign_image/frame.png" id="frame" class="" alt="frame" >
+                    <img src="/workspace/image/sign_image/main_1.png" id="mainImage" alt="인스타그램 이미지">
+                </div>
+                <div class="sign-box">
+                    <div class="sign-in-box">
+                        <div class="logo-box d-flex justify-content-center">
+                            <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="logo-image" width="175px">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-box d-flex">
+                                <input type="text" id="phoneOrUserNameOrEamil" class="user-id" placeholder="전화번호, 사용자 이름 또는 이메일">
+                            </div>
+                            <div class="input-box d-flex">
+                                <input type="password" id="password" class="user-pw" placeholder="비밀번호">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" id="signInBtn" class="sign-btn" disabled="disabled">로그인</button>
+                            <button type="button" id="SignInloadingBtn">
+                                <img src="/workspace/image/sign_image/progress_loading.gif" class="sign-in-loading-img" alt="roading">
+                            </button>
+                        </div>
+                        <div class="or-box d-flex align-items-center">
+                            <hr width="100px">
+                            <div class="or">또는</div>
+                            <hr width="100px">
+                        </div>
+                        <div class="face-book-box d-flex justify-content-center ">
+                            <a class="d-flex align-items-center" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%25221j1143h5e2b5lbqw9zrqwkqyvuthow5l12h0q1bis72ivb8xcb%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Dko_KR%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D1661ca2a-2ce5-444c-9786-208761d8bcdf%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25221j1143h5e2b5lbqw9zrqwkqyvuthow5l12h0q1bis72ivb8xcb%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=ko_KR&pl_dbl=0">
+                                <i class='face-book-logo bx bxl-facebook-square'></i>
+                                <span>Facebook으로 로그인</span>
+                            </a>
+                        </div>
+                        <div id="duplicationText" class="d-none">입력한 사용자 이름을 사용하는 계정을 찾을 수 없습니다. 사용자 이름을 확인하고 다시 시도하세요.</div>
+                        <div id="validPasswordText" class="text-center d-none">잘못된 비밀번호입니다. 다시 확인하세요.</div>			
+                        <div class="forget-password-box d-flex justify-content-center">
+                            <a href="https://www.instagram.com/accounts/password/reset/">
+                                <span>비밀번호를 잊으셨나요?</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="account-box d-flex justify-content-center align-items-center mt-2">
+                        <span>계정이 없으신가요? <a href="sign_up.html" class="font-weight-bold">가입하기</a></span>
+                    </div>
+                    <div class="app-download-box d-flex justify-content-center ">
+                        <span>앱을 다운로드 하세요.</span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank">
+                            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png" alt="앱스토어" width="136px" class="mr-2">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb&utm_campaign=loginPage&ig_mid=2354B04F-7B4D-4C23-90F2-EEE102B6B5C9&utm_content=lo&utm_medium=badge" target="_blank">
+                            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png" alt="구글스토어" width="136px">
+                        </a>
+                    </div>
+                </div>
+            </article>
+		</section>
+		<footer class="d-flex justify-content-center align-items-center">
+            <span>Copyright © PCW Co., Ltd. All Rights Reserved.</span>
+        </footer>
+	</div>
+</body>
+<script>
+
+//ajax 로딩바
+	$(document).ready(function() {
+		$('#SignInloadingBtn').hide();	// 첫 시작시 로딩바를 숨김
+	})
+	.ajaxStart(function() {
+		$('#signInBtn').hide();		// 로그인 버튼 숨김
+		$('#SignInloadingBtn').show();	// ajax 요청시 로딩바를 보여줌
+	})
+	.ajaxStop(function() {
+		$('#SignInloadingBtn').hide();	// ajax 종료시 로딩바를 숨김
+		$('#signInBtn').show();		// 로그인 버튼 보여줌 
+	});
+
+	$(document).ready(function(e) {
+		// 이미지 변환
+	/* 	let mainImageArr = ['/image/sign_image/main_1.png', '/image/sign_image/main_2.png', '/image/sign_image/main_3.png', '/image/sign_image/main_4.png'];
+		let currentIndex = 0;
+		
+		setInterval(function(e) {
+			$('#mainImage').attr('src', mainImageArr[currentIndex]);
+			currentIndex++;
+			
+			if (currentIndex > mainImageArr.length-1) {
+				currentIndex = 0;
+			}	
+		}, 3000); */
+		
+		// 비활성화 
+		$(':input').on({
+			// 로그인 버튼 비활성화
+		   	input:function() {
+		   		
+				let loginId = $('#phoneOrUserNameOrEamil').val().trim();
+				let password = $('#password').val();
+				
+				// 전화번호, 사용자 이름 또는 이메일 패스워드가 다 입력되었을 때 가입버튼 비활성화를 풀어준다. (그 전까지 비활성화)
+				if (loginId != '' && password != '' && password.length > 5) {
+					$('#signInBtn').prop('disabled', false);	// 활성화
+					$('#signInBtn').addClass('sign-disabled');
+					$('#signInBtn').addClass('sign-disabled:hover');
+				} else {
+					$('#signInBtn').prop('disabled', true);	// 비활성화
+					$('#signInBtn').removeClass('sign-disabled');
+				} 
+			}
+			, keyup:function(e) {	// 엔터를 쳤을 때 로그인 가능
+				if(e.key == 'Enter' || e.keyCode == 13) {
+					$('#signInBtn').trigger('click');
+				}
+			}
+		});
+		
+		$('#signInBtn').on('click', function() {
+			let loginId = $('#phoneOrUserNameOrEamil').val().trim();
+			let password = $('#password').val();
+			$.ajax({
+				type: "post"
+				, url: "/user/sign_in"
+				, data: {"loginId":loginId, "password":password}
+				, success: function(data) {
+					if (data.result == 'success') {
+						location.href="/timeline/timeline_view";
+					} else {
+						$('#duplicationText').removeClass('d-none');
+						// alert(data.error_message);
+					}
+				}
+				, error: function(e) {
+					alert("로그인을 실패하였습니다. 관리자에게 문의해주세요.");
+				}
+			});
+		});
+	});
+</script>
+</html>

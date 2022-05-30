@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+<link rel="icon" type = "image/png" href="/worskpace/image/favicon.png"/>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body>
+    <div id="wrap">
+        <article class="sign-up-content-box d-flex justify-content-center align-items-center">
+            <div class="sign-box">
+                <div class="sign-up-box">
+                    <div class="sign-logo-box d-flex justify-content-center">
+                        <img src="/workspace/image/sign_image/logo.png" alt="logo-image" width="185px">
+                    </div>
+                    <div class="phrases-box text-center">
+                        <h2>친구들의 사진과 동영상을 보려면 가입하세요.</h2>
+                    </div>
+                    <div class="face-book-box d-flex justify-content-center ">
+                        <a class="face-book-link d-flex justify-content-center align-items-center" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%25221j1143h5e2b5lbqw9zrqwkqyvuthow5l12h0q1bis72ivb8xcb%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Dko_KR%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D1661ca2a-2ce5-444c-9786-208761d8bcdf%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25221j1143h5e2b5lbqw9zrqwkqyvuthow5l12h0q1bis72ivb8xcb%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=ko_KR&pl_dbl=0">
+                            <i class='face-book-logo bx bxl-facebook-square'></i>
+                            <span>Facebook으로 로그인</span>
+                        </a>
+                    </div>
+                    <div class="sign-up-or-box d-flex align-items-center">
+                        <hr width="100px">
+                        <div class="or">또는</div>
+                        <hr width="100px">
+                    </div>
+                        <div class="form-group">
+                            <div class="input-box d-flex">
+                                <input type="text" id="phoneOrEamil" placeholder="휴대폰 번호 또는 이메일 주소" >
+                                <div class="check-box d-flex align-items-center">
+                                    <img src="/image/sign_image/check.png" id="phoneOremailCheckOk" class="d-none" alt="체크" width="22px">
+                                    <img src="/image/sign_image/remove.png" id="phoneOremailCheckduplicate" class="d-none" alt="체크" width="22px">
+                                </div>
+                            </div>
+                            <div class="input-box d-flex">
+                                <input type="text" id="fullName" placeholder="성명">
+                                <div class="check-box d-flex align-items-center">
+                                    <img src="/image/sign_image/check.png" id="fullNameCheckOk" class="d-none" alt="체크" width="22px">
+                                </div>
+                            </div>
+                            <div class="input-box d-flex">
+                                <input type="text" id="userName" placeholder="사용자 이름">
+                                <div class="check-box d-flex align-items-center">
+                                    <img src="/image/sign_image/check.png" id="userNameCheckOk" class="d-none" alt="체크" width="22px">
+                                    <img src="/image/sign_image/remove.png" id="userNameCheckduplicate" class="d-none" alt="체크" width="22px">
+                                        <button type="button" id="random" class="d-none"><img src="/image/sign_image/refresh.png" width="22px"></button>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" id="password" name="password" placeholder="비밀번호">
+                            </div>
+                        </div>
+                        <div class="sign-btn-box">
+                            <button type="button" id="signUpBtn" class="sign-btn" disabled="disabled">가입</button>
+                            <button type="button" id="signUploadingBtn">
+                                <img src="/image/sign_image/progress_loading.gif" class="sign-up-loading-img" alt="roading">
+                            </button>
+                            <div id="duplicationText" class="d-none">This field is required.</div>
+                            <div id="validEmailText" class="d-none">Enter a valid email address.</div>
+                            <div id="validUserNameText" class="d-none">사용할 수 없는 사용자 이름입니다. 다른 이름을 사용하세요.</div>			
+                        </div>
+                </div>
+                <div class="account-box d-flex justify-content-center align-items-center mt-2">
+                    <span>계정이 있으신가요? <a href="/user/sign_in_view">로그인</a></span>
+                </div>
+                <div class="app-download-box d-flex justify-content-center ">
+                    <span>앱을 다운로드 하세요.</span>
+                </div>
+				<div class="d-flex justify-content-center">
+					<a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank">
+						<img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png" alt="앱스토어" width="136px" class="mr-2">
+					</a>
+					<a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb&utm_campaign=loginPage&ig_mid=2354B04F-7B4D-4C23-90F2-EEE102B6B5C9&utm_content=lo&utm_medium=badge" target="_blank">
+						<img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png" alt="구글스토어" width="136px">
+					</a>
+				</div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
+
+<script>
+	// ajax 로딩바
+ 	$(document).ready(function() {
+		$('#signUploadingBtn').hide();	// 첫 시작시 로딩바를 숨김
+	})
+	.ajaxStart(function() {
+		$('#signUpBtn').hide();		// 가입 버튼 숨김
+		$('#signUploadingBtn').show();	// ajax 요청시 로딩바를 보여줌
+	})
+	.ajaxStop(function() {
+		$('#signUploadingBtn').hide();	// ajax 종료시 로딩바를 숨김
+		$('#signUpBtn').show();		// 가입 버튼 보여줌 
+	});
+ 
+	$(document).ready(function() {
+		$(':input').on({
+			// 가입 버튼 비활성화
+		   	input:function() {
+		   		
+				let phoneOrEmail = $('#phoneOrEamil').val().trim();
+				let fullName = $('#fullName').val().trim();
+				let userName = $('#userName').val().trim();
+				let password = $('#password').val();
+				
+				// 핸드폰 번호 또는 이메일 , 성명, 사용자이름, 패스워드가 다 입력되었을 때 가입버튼 비활성화를 풀어준다. (그 전까지 비활성화)
+				if (phoneOrEmail != '' && fullName != '' && userName != '' && password != '' && password.length > 5) {
+					$('#signUpBtn').prop('disabled', false);	// 활성화
+					$('#signUpBtn').addClass('sign-disabled');
+					$('#signUpBtn').addClass('sign-disabled:hover');
+				} else {
+					$('#signUpBtn').prop('disabled', true);	// 비활성화
+					$('#signUpBtn').removeClass('sign-disabled');
+				} 
+			}
+			// 입력값이 없을 때 엔터를 친 경우 
+			, keydown:function(e) {
+				if (e.keyCode == 13) { // 13은 keyCode값에서 엔터를 의미 
+					if ($(this).val() == '') {	
+						$('#emailCheckduplicate').removeClass('d-none');	// 이메일 사용불가
+						$('#userNameCheckduplicate').removeClass('d-none');		// 사용자 이름 사용 불가 
+						$('#duplicationText').removeClass('d-none');	// This field is required.
+						return;
+					}
+				}
+			}
+		});
+		
+		// 이메일 정규화 표현식
+		const regEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		// 휴대폰 정규화 표현식
+		const regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+		
+		// 휴대폰 번호 또는 이메일 주소 
+		$('#phoneOrEamil').on({
+			// focusout 되었을 때 중복확인과 사용자 이름 랜덤 추천 
+			focusout:function() {
+				let phoneOrEmail = $('#phoneOrEamil').val().trim();	
+				let userName = $('#userName').val().trim();
+				let fullName = $('#fullName').val().trim();
+				
+				// 휴대폰 번호 또는 이메일 주소에 입력값이 있으면서 사용자 이름 입력값이 비었다면 랜덤 함수 버튼 생성
+				if (phoneOrEmail.length > 1 && userName == '') {
+					$('#random').removeClass('d-none');
+					$('#random').on('click', function(e) {
+						// userName input에 랜덤 숫자 붙여서 값을 변경
+						if (phoneOrEmail.match(regPhone)) {	// 만약 폰번호로 입력한다면 성명에 랜덤 숫자를 붙인다.
+							$('#userName').val(fullName + random(1, 2000));	
+						} else {
+							$('#userName').val(phoneOrEmail + random(1, 2000));	
+						}
+					});
+				}
+				
+				$.ajax({
+					url: "/user/is_duplicated_phone_or_email"
+					, data: {"phoneOrEmail":phoneOrEmail}
+					, success: function(data) {
+						// 중복되지 않거나 정규식에 맞을 경우 
+						if (data.result == false &&  (phoneOrEmail.match(regEmail) ||  phoneOrEmail.match(regPhone))) {	// 중복이 아닐경우 
+							$('#phoneOremailCheckOk').removeClass('d-none'); // 사용 가능
+							$('#phoneOremailCheckduplicate').addClass('d-none');
+							// console.log("duplicated success");
+						} else {
+							$('#phoneOremailCheckduplicate').removeClass('d-none'); // 사용 불가	
+							$('#phoneOremailCheckOk').addClass('d-none'); 
+							// console.log("duplicated fail");
+						}
+					}
+					, error: function(e) {
+						alert("휴대폰 번호 중복확인에 실패했습니다. 관리자에게 문의해주세요.");
+					}		
+				});
+			}
+		
+			// enter키를 눌렀을 때 중복확인
+			, keyup:function(e) {
+				let phoneOrEmail = $('#phoneOrEamil').val().trim();	
+				let userName = $('#userName').val().trim();
+				let fullName = $('#fullName').val().trim();
+				
+				// enter를 눌렀을 경우 
+				if (e.keyCode == 13) { // 13은 keycode에서 enter를 의미
+					// 휴대폰 번호 또는 이메일 주소에 입력값이 있으면서 사용자 이름 입력값이 비었다면 랜덤 함수 버튼 생성
+					if (phoneOrEmail.length > 1 && userName == '') {
+						$('#random').removeClass('d-none');
+						$('#random').on('click', function(e) {
+							// userName input에 랜덤 숫자 붙여서 값을 변경
+							if (phoneOrEmail.match(regPhone)) {	// 만약 폰번호로 입력한다면 성명에 랜덤 숫자를 붙인다.
+								$('#userName').val(fullName + random(1, 2000));	
+							} else {
+								$('#userName').val(phoneOrEmail + random(1, 2000));	
+							}
+						}); 
+					}
+					
+					$.ajax({
+						url: "/user/is_duplicated_phone_or_email"
+						, data: {"phoneOrEmail":phoneOrEmail}
+						, success: function(data) {
+							// 휴대폰 번호 또는 이메일 정규식이 아닐 경우 
+							if (data.result == false &&  (phoneOrEmail.match(regEmail) ||  phoneOrEmail.match(regPhone))) {	// 중복이 아닐경우 
+								$('#phoneOremailCheckOk').removeClass('d-none'); // 사용 가능
+								$('#phoneOremailCheckduplicate').addClass('d-none');
+								// console.log("duplicated success");
+							} else {
+								$('#phoneOremailCheckduplicate').removeClass('d-none'); // 사용 불가	
+								$('#phoneOremailCheckOk').addClass('d-none'); 
+								// console.log("duplicated fail");
+							}
+						}
+						, error: function(e) {
+							alert("휴대폰 번호 중복확인에 실패했습니다. 관리자에게 문의해주세요.");
+						}		
+					});
+				}
+			}
+		});
+		
+		// 성명은 중복 가능
+		$('#fullName').on('focusout', function() {
+			let fullName = $('#fullName').val().trim();
+			if (fullName.length > 1) {
+				$('#fullNameCheckOk').removeClass('d-none');
+				return;
+			}
+		});
+		
+		// 사용자 이름
+		$('#userName').on({
+			focusout:function() {
+				let userName = $('#userName').val().trim();
+				let phoneOrEmail = $('#phoneOrEamil').val().trim();
+				let fullName = $('#fullName').val().trim();
+				// 사용자이름 정규식 (영어소문자와 숫자만 입력가능)
+				let regUser = /[0-9a-z]/;
+				
+				// 사용자이름이 정규식과 일치하지 않다면 사용 불가 
+				if (regUser.test(userName) == false) {
+					$('#userNameCheckduplicate').removeClass('d-none');
+					return;
+				}
+				
+				// 경고 문구 초기화
+				$('#userNameCheckOk').addClass('d-none');
+				$('#userNameCheckduplicate').addClass('d-none');
+				
+				
+				$.ajax({
+					url: "/user/is_duplicated_user_name"
+					, data: {"userName":userName}
+					, success: function(data) {
+						// 사용자 이름이 중복일 경우 
+						if (data.result_code == 500) {	// 사용 불가 
+							$('#userNameCheckduplicate').removeClass('d-none');
+							// console.log("userName duplicated fail");
+						} else {
+							$('#userNameCheckOk').removeClass('d-none');
+							// console.log("userName duplicated success")
+						}
+					}
+					, error: function(e) {
+						alert("이름 중복확인에 실패했습니다. 관리자에게 문의해주세요.");
+					}	
+				});
+			}
+		});
+		
+		// 가입버튼 클릭 시 
+		$('#signUpBtn').on('click', function() {
+			
+			// 경고 문구 초기화 
+			$('#validEmailText').addClass('d-none');
+			$('#validUserNameText').addClass('d-none');
+			
+			// 핸드폰 번호 또는 이메일 주소 넣기 
+			let phoneOrEmail = $('#phoneOrEamil').val().trim();	
+			let phoneNumber = null;
+			let email = null;
+			
+			// alert(phoneOrEmail);
+		
+			if (phoneOrEmail.match(regPhone) == null && phoneOrEmail.match(regEmail) == null) {
+				$('#validEmailText').removeClass('d-none');
+				return;
+			}
+			
+		 	if ($('#userNameCheckduplicate').hasClass('d-none') == false) {
+		 		$('#validUserNameText').removeClass('d-none');
+				return;
+			}  
+			
+			// 사용자가 핸드폰번호를 입력하였으면 phoneNumber변수에 저장
+			if (phoneOrEmail.match(regPhone)) {
+				phoneNumber = phoneOrEmail;
+			}
+			// 사용자가 이메일을 입력하였으면 email 변수에 저장
+			else if (phoneOrEmail.match(regEmail)) {
+				email = phoneOrEmail;
+			}  
+			// alert("핸드폰 번호: " + phoneNumber + "\n" + "이메일 주소: " + email);
+			
+			let fullName = $('#fullName').val().trim();
+			let userName = $('#userName').val().trim();
+			let password = $('#password').val();
+			
+			
+			$.ajax({
+				// request 요청
+				type:"post"
+				, url: "/user/sign_up"
+				, data: {"phoneNumber":phoneNumber, "email":email, "fullName":fullName, "userName":userName, "password":password}
+				// response
+				, success: function(data) {
+					if (data.result == "success") {
+						location.href="/user/sign_in_view"
+					} else {
+						alert("가입에 실패했습니다. 다시 시도해주세요.");
+					}
+				}
+				, error: function(e) {
+					alert("회원가입에 실패했습니다. 관리자에게 문의해주세요.");
+				}
+			});
+		});
+	});
+	//난수 함수 생성
+	function random(min, max) {
+		return Math.floor(Math.random() * max) + min;
+	}
+	
+</script>

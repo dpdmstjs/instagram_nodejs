@@ -1,0 +1,1015 @@
+/* 레이아웃  */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fafafa;
+}
+
+a {
+	text-decoration-line: none;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+a:hover {
+	color: #007bff;
+}
+
+select {
+	border: none;
+	border-radius: 0;
+	outline: none;
+	background: #fafafa;
+	color: #8e8e8e;
+}
+
+select:hover,
+button:hover {
+	cursor: pointer;
+}
+
+footer {
+	margin: 0 auto;
+	font-size: 12px;
+	padding-bottom: 60px;
+	color: #8e8e8e;
+	padding-top: 40px;
+}
+
+.footer-1 > div {
+	margin: 0 8px 8px;
+}
+.footer-2 > div {
+	margin: 0 8px 12px;
+}
+
+.footer-1 > div > a, 
+.footer-2 > div > a {
+	color: #8e8e8e;
+}
+
+/* 로그인 화면 */
+
+.content-box {
+	/* max-width: 935px;  */
+	width: 100%;
+	/* height: 700px; */
+	margin: 0 auto;
+	padding-top: 80px;
+	padding-bottom: 70px;
+}
+
+.image-box {
+	padding-right: 10px;
+	position: relative;
+}
+
+#frame {
+	width: 430px;
+}
+
+#mainImage {
+	position: absolute;
+	right: 50px;
+	top: 40px;
+	width: 247px;
+	height: 530px;
+}
+.sign-in-box {
+	width: 350px;
+	/* height: 410px; */
+	border: 1px solid lightgray;
+	padding: 0 40px;
+	background: white;
+}
+
+.sign-box {
+	width: 350px;
+	margin-top: 30px;
+}
+
+.logo-box {
+	margin: 28px 0;
+}
+
+
+.or-box {
+	margin: 10px 0 17px;
+}
+
+.or {
+	margin:0 20px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #8E8E8E;
+}
+
+.face-book-box > a {
+	color: #3b5998;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.face-book-logo {
+	font-size: 23px;
+	margin-right: 5px;
+}
+
+.forget-password-box {
+	font-size: 13px;
+	margin: 20px 0;
+}
+
+.forget-password-box > a{
+	color: black;
+}
+
+#signInBtn {
+	cursor: default;
+	width: 100%;
+	height: 30px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	background-color:rgb(178,223,252);
+	color: white;
+	font-weight: bold;
+}
+
+#signInBtn.sign-disabled {
+	background: #0095F6;
+	cursor: pointer;
+}
+
+#signInBtn.sign-disabled:hover {
+	opacity: 0.9;
+}
+
+#SignInloadingBtn {
+	width: 100%;
+	height: 30px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	background-color: #0095f6;
+	color: white;
+	font-weight: bold;
+}
+
+.sign-in-loading-img {
+	position: relative;
+	top: -2px;
+	left: 0;
+	width: 20px;
+}
+
+
+/* 회원가입 화면 */
+.sign-up-content-box {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 51px;
+}
+
+.sign-up-box {
+	width: 350px;
+	border: 1px solid lightgray;
+	padding: 0 40px;
+	background: white;
+	margin-top: 40px;
+}
+
+.sign-logo-box {
+	margin: 25px 0 8px;
+}
+
+.phrases-box {
+	margin-bottom: 18px;
+}
+
+.phrases-box > h2 {
+	font-size: 17px;
+	font-weight: bold;
+	color: #8e8e8e;
+}
+
+.face-book-link {
+	background: #0095f6; 
+	width: 100%;
+	height: 31px;
+	border-radius: 5px;
+}
+
+.face-book-link > i,
+.face-book-link > span {
+	color: white;
+}
+
+.sign-up-or-box {
+	margin: 10px 0 8px;
+}
+
+.input-box {
+	height: 36px;
+	border: 1px solid lightgray;
+	border-radius: 3px; 
+	background: #fafafa;
+	margin-bottom: 8px;
+}
+.check-box {
+	height: 36px;	
+	
+} 
+.check-box > img {
+	margin: 0px  7px;
+}
+
+#fullNameCheckOk {
+	margin-right: 10px;
+}
+
+#random {
+	border: none;
+	outline: none;
+	background: none;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.sign-btn-box {
+	margin: 15px 0px 40px 0px;
+}
+
+#duplicationText,
+#validEmailText,
+#validUserNameText {
+	color: #ed4956;	
+	text-align: center;
+	margin: 18px 0;
+	font-size: 14px;
+}
+
+
+#signUpBtn {
+	cursor: default;
+	width: 100%;
+	height: 30px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	background-color:rgb(178,223,252);
+	color: white;
+	font-weight: bold;
+}
+
+#signUpBtn.sign-disabled {
+	background: #0095F6;
+	cursor: pointer;
+}
+
+#signUpBtn.sign-disabled:hover {
+	opacity: 0.9;
+}
+
+#signUploadingBtn {
+	width: 100%;
+	height: 30px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	background-color: #0095f6;
+	color: white;
+	font-weight: bold;
+}
+
+.sign-up-loading-img {
+	position: relative;
+	top: -2px;
+	left: 0;
+	width: 20px;
+}
+
+/* 로그인 화면, 회원가입 화면  */
+
+.form-group > div > input {
+	width:100%;
+	height: 100%;
+	padding: 10px;	
+	background: #fafafa;
+	border-radius: 3px; 
+	border: none;
+	font-size: 14px;
+	outline: #d4d4d4;
+}
+
+.form-group > div > input {
+	outline: none;
+}
+
+.form-group > div > input::placeholder {
+	font-size: 12px;
+}
+
+.account-box {
+	width: 350px;
+	height: 63px;
+	border: 1px solid lightgray;
+	background: white;
+	font-size: 14px;
+}
+
+.app-download-box {
+	margin: 18px 0;
+	font-size: 14px;
+}
+
+
+
+/* 타임라인 화면 */
+
+/* .timeline-container {
+	  flex-direction: column;
+}
+ */
+ 
+.timeline-profile-and-info-box {
+	width: 300px;
+}
+.timeline-profile-and-info-box > div {
+	position: fixed;
+	z-index: 1;
+	padding: 30px;
+}
+.timeline-user-profile-box > img {
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	object-fit:fill;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.timeline-user-profile-box > div {
+	flex-direction: column;
+	width: 187px;
+}
+
+.user-name {
+	font-weight: 600;
+}
+
+.profile-name {
+	color: #8e8e8e;	
+}
+
+.timeline-user-profile-box > a {
+	font-size: 14px;
+	color: #0095f6;
+	font-weight: 600;
+}
+
+.timeline-info-box {
+	margin-top: 30px;
+	flex-direction: column;
+}
+
+.timeline-info-box > div {
+	margin-top: 20px;
+	width: 293px;
+	flex-direction: column;
+}
+
+.timeline-info-box > div > span {
+	font-size: 12px;
+	color: #d4d4d4;	
+	width: 100%;
+}
+
+
+header {
+	height: 60px;
+	border-bottom: 1px solid lightgray;
+	/* width: 100%; */
+	position: fixed; 
+	/* z-index 다시 찾아보고 정리하기 */
+	z-index: 10;
+	top: 0;
+	left: 0;
+  	right: 0;
+  	background: white;
+}
+
+.feed-logo-box {
+	width: 330px;	
+}
+
+.feed-logo-box > img {
+	margin-top: 10px;
+}
+
+.search-box {
+	background: #efefef;
+	border-radius: 8px;
+	padding: 0px 10px;
+}
+
+.search {
+	height: 36px;
+	width: 240px;
+	padding: 10px;
+	border: none;
+	outline: none; 
+	background: #efefef;
+	color: #8e8e8e;
+	line-height: 25px;
+}
+
+.menu {
+	width: 340px;	
+}
+
+.menu > a {
+	margin-right: 24px;
+}
+
+#postCreateBtn {
+	margin-right: 24px;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+.profile-box > img {
+/* 	position: relative; */
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	object-fit:fill;
+	cursor: pointer;
+	padding: 1px;
+}
+
+.gnb-profile-img {
+	border: 1px solid black;
+}
+
+.dropdown-menu {
+	width: 230px;
+	margin-top: 10px;
+	margin-right: 480px;
+	font-size: 14px;
+	padding: 0px;
+} 
+
+.dropdown-menu .sign-out-link {
+	border-top: 1px solid lightgray;
+}
+
+.dropdown-item {
+	padding: 10px;
+}
+
+.login-btn {
+	border-radius: 5px;
+	color: white;
+	background: #0095F6;
+	padding: 5px 10px;
+	font-weight: 600;
+	font-size: 14px;
+	
+}
+
+.sign-up-btn {
+	color: #0095F6;
+	font-weight: 600;
+	font-size: 14px;
+	margin-left: -10px;
+	
+}
+
+.feed-content {
+  position: relative;
+  left: 0px;
+  top: 60px; 
+  background: #fafafa;
+}
+
+.feed-content > section {
+	padding-top: 25px;
+}
+
+
+.feed-box {
+	border: 1px solid lightgray; 
+	margin-bottom: 25px;
+	width: 616px;
+	background: white;
+}
+
+.header-box {
+	height: 64px;
+	background: white;
+	padding: 25px 20px;
+}
+
+.feed-profile-box > img {
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	object-fit:fill;
+	margin-right: 7px;
+}
+
+.feed-profile-box > span > a {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 38px;
+	color: black;
+}
+
+.post-img-box {
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+
+.post-img-box > img {
+	width: 614px;
+	height: 614px;
+	object-fit:fill;
+}
+
+.more-btn {
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.more-btn:focus {
+	outline: none;
+}
+
+.section-box {
+	height: 54px;
+	padding: 0px 13px;
+}
+
+.section-box > div > button {
+	height: 40px;
+	border: none;
+	background: none;
+	margin-right: 10px;
+}
+
+#saveBtn {
+	margin-right: -1px;
+}
+
+
+#dmBtn > img{
+	margin-top: 3px;
+}
+.section-box > div > button:hover {
+	cursor: pointer;
+}
+
+.like-box {
+	display: none;
+	height: 24px;
+	padding: 0px 20px;
+	margin-bottom: 10px;
+}
+
+.like-box > img {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	object-fit:fill;
+	margin-right: 7px;
+}
+
+.like-box > span {
+	font-weight: 600;
+}
+
+.like-count {
+	margin-left: 5px;
+}
+
+.user-box {
+	padding: 0px 20px;
+	width: 614px;
+}
+
+.user-content-box > a {
+	color: black;
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.user-content-box > span {
+	font-size: 14px;
+}
+
+.comment-view-box {
+	padding: 0px 20px;
+}
+
+.comment-view-box > div > a {
+	color: black;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.comment-view-box > div > span {
+	font-size: 14px;
+}
+
+.date-box {
+	margin-bottom: 15px;
+}
+.date-box > span {
+	padding: 0px 20px;
+	color: #8e8e8e;
+	font-size: 10px;
+}
+
+.comment-box {
+	border-top: 1px solid lightgray;
+	padding: 15px 20px;
+}
+
+.comment-box > img {
+	margin-right: 10px;
+}
+
+.comment-box > textarea {
+	width: 500px;
+	height: 22px;
+	border: none;
+	outline: none;
+	resize: none;
+	font-size: 14px;
+}
+
+.comment-btn  {
+	cursor: default;
+	outline: none;
+	border: none;
+	background: none;
+	color: #0095F6;
+	font-weight: bold;
+	opacity: 0.3;
+}
+
+.comment-btn.comment-disabled {
+	color: #0095F6;
+	opacity: 1;
+}
+
+
+/*모달창 */
+
+/* 새로운 게시글 만들기 (1) */
+.post-modal-dialog {
+	width: 661px;
+}
+
+.post-modal-content{
+	border-radius: 15px;
+}
+
+.post-image-modal-header {
+	display:flex;
+	justify-content: center;
+	padding: 10px;
+	border-bottom: 1px solid lightgray;
+}
+
+.post-image-modal-header > span {
+	font-weight: 700;
+}
+
+.post-image-crop-modal-header {
+	display:flex;
+	justify-content: space-between;
+	padding: 10px;
+	border-bottom: 1px solid lightgray;
+}
+
+
+.back-btn1,
+.back-btn2 {
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 28px;
+}
+
+.back-btn:focus {
+	outline: none;
+}
+
+
+.cancel-btn {
+	background: none;
+	outline: none;
+	border: none;
+}
+
+.cancel-btn:focus {
+	outline: none;
+}
+
+.post-image-crop-modal-header > span {
+	font-weight: 700;
+}
+
+.next-btn {
+	color: #0095F6;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+.next-btn:focus {
+	outline: none;
+}
+
+.post-modal-img-upload-box {
+  display: flex;
+  flex-direction: column;
+  height: 718px;
+  width: 659px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.post-modal-img-upload-box > span {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.post-modal-img-upload-box > div > button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  outline: none;
+} 
+
+
+/* 새로운 게시글 만들기 (2) */
+
+.modal-container {
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.close-btn:focus {
+	outline: none;
+}
+
+.post-modal {
+  background-color: #fff;
+  width: 1058px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  text-align: center;
+  border-radius: 15px;
+  z-index: 5;
+}
+
+.post-modal-title-box {
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+
+.post-modal-title-box > span {
+	font-weight: 600;
+}
+
+.post-modal-img-box > span {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.post-modal-img-view-box {
+  display: flex;
+  flex-direction: column;
+  height: 718px;
+  width: 718px;
+}
+
+#imageViewPrev {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 0px 15px 15px;
+}
+
+
+#imageViewNext {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 0px 0px 0px 15px;
+}
+
+.post-modal-content-box {
+	width: 339px;
+	height: 718px;
+	border-left: 1px solid lightgray;
+	display: flex;
+  	flex-direction: column;
+
+}
+
+.post-profile-box {
+	margin: 16px;
+}
+
+.profile-img {
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	object-fit:cover;
+}
+
+.post-profile-box > span {
+	font-weight: 600;
+  /* margin-left: 10px; */
+}
+
+.post-content-textarea {
+	padding: 0px 16px;
+}
+
+#postContent {
+	border: none;
+	height: 168px;
+	width: 100%;
+	resize: none;
+	outline: none;
+	font-size: 15px;
+}
+
+.character-limit-box {
+	padding: 16px;
+	border-bottom: 1px solid lightgray;
+}
+
+.character-limit-box > span {
+	font-size: 13px;
+	color:lightgray;
+}
+
+.character-limit-box > span > input {
+	font-size: 13px;
+	color:lightgray;
+	outline: none;
+	border: none;
+	max-width: 40px;
+}
+
+.gps-box,
+.accessibility-box,
+.setting-box {
+	padding: 10px 16px;
+	border-bottom: 1px solid lightgray;
+}
+
+.gps-box > span {
+	font-size: 15px;
+	color:lightgray;
+}
+
+.gps-box > i,
+.accessibility-box > i,
+.setting-box > i {
+	font-size: 20px;
+}
+
+/* close 모달창 */
+.close-modal-dialog {
+	width: 400px;
+}
+
+.close-modal-content {
+	border-radius: 10px;
+}
+
+.post-delete-text {
+	flex-direction: column;
+	padding: 25px 0px;
+	border-bottom: 1px solid lightgray;
+}
+
+.post-delete-text-span-1 {
+	font-weight: 700;
+	font-size: 20px;
+	padding-bottom: 8px;
+}
+.post-delete-text-span-2 {
+	font-size: 14px;
+	color: #484848;
+	font-weight: 500;
+}
+
+.delete-btn-box {
+	padding: 15px 0px;
+	border-bottom: 1px solid lightgray;
+}
+
+.cancel-btn-box {
+	padding: 15px 0px;
+}
+
+/* 타임라인 모달 창 */
+.timeline-modal-dialog {
+	width: 410px;
+}
+
+.timeline-modal-content {
+	border-radius: 15px;
+	font-size: 14px;
+}
+
+.timeline-modal-content > div > div {
+	padding: 14px;
+}
+
+.timeline-modal-content > div > div > button {
+	background: none;
+	outline: none;
+	border: none;
+	width: 100%;
+}
+
+.delete-btn {
+	color: #ed4956;
+	font-weight: 600;
+}
+
+.delete-btn:hover {
+	color: #ed4956;
+	font-weight: 600;
+}
+
+.modal-text {
+	color: black;
+}
+
+.modal-text:hover {
+	color: black;
+}
+
+.modal-edit-btn {
+	border-top: 1px solid lightgray;
+}
+
+.modal-more-box {
+	border-bottom: 1px solid lightgray;
+}
+
+#view {
+	width: 718px;
+	height: 705px;
+}
+
+
